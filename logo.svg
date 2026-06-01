@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Sfondo cerchio blu navy -->
+  <circle cx="100" cy="100" r="97" fill="#0d1b4b"/>
+
+  <!-- Bordo esterno giallo doppio -->
+  <circle cx="100" cy="100" r="97" fill="none" stroke="#f5d020" stroke-width="5"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#f5d020" stroke-width="1.5"/>
+
+  <!-- Testo circolare POLISPORTIVA (arco superiore) -->
+  <defs>
+    <path id="topCircle" d="M 18,100 A 82,82 0 0,1 182,100"/>
+    <path id="botCircle" d="M 22,112 A 82,82 0 0,0 178,112"/>
+    <clipPath id="vClip">
+      <polygon points="38,52 58,52 100,138 142,52 162,52 108,155 92,155"/>
+    </clipPath>
+  </defs>
+
+  <text font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="17" fill="#f5d020" letter-spacing="2">
+    <textPath href="#topCircle" startOffset="50%" text-anchor="middle">POLISPORTIVA</textPath>
+  </text>
+
+  <!-- Testo VIANNEY (arco inferiore) -->
+  <text font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="18" fill="#f5d020" letter-spacing="3.5">
+    <textPath href="#botCircle" startOffset="50%" text-anchor="middle">VIANNEY</textPath>
+  </text>
+
+  <!-- V shape gialla -->
+  <polygon points="38,52 58,52 100,138 142,52 162,52 108,155 92,155" fill="#f5d020"/>
+
+  <!-- Strisce diagonali blu navy sulla V -->
+  <g clip-path="url(#vClip)">
+    <line x1="30"  y1="40" x2="75"  y2="165" stroke="#0d1b4b" stroke-width="9"/>
+    <line x1="50"  y1="40" x2="95"  y2="165" stroke="#0d1b4b" stroke-width="9"/>
+    <line x1="70"  y1="40" x2="115" y2="165" stroke="#0d1b4b" stroke-width="9"/>
+    <line x1="90"  y1="40" x2="135" y2="165" stroke="#0d1b4b" stroke-width="9"/>
+    <line x1="110" y1="40" x2="155" y2="165" stroke="#0d1b4b" stroke-width="9"/>
+  </g>
+
+  <!-- Contorno V per pulizia -->
+  <polygon points="38,52 58,52 100,138 142,52 162,52 108,155 92,155" fill="none" stroke="#f5d020" stroke-width="1.5"/>
+</svg>
