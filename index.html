@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Polisportiva Vianney – Torino | Stagione 2026/27</title>
+<meta name="description" content="Polisportiva Vianney Torino – Calcio, Pallavolo, Bocce, Musica. Stagione 2026/27. Prenota campetti e sale online."/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:    #0d1b4b;
+  --navy2:   #142060;
+  --navy3:   #1a2870;
+  --gold:    #f5d020;
+  --gold2:   #fce14a;
+  --gold3:   #e8c200;
+  --black:   #07090f;
+  --dark:    #0b0f1e;
+  --dark2:   #101628;
+  --dark3:   #161f36;
+  --white:   #f2f5ff;
+  --muted:   rgba(242,245,255,.5);
+  --muted2:  rgba(242,245,255,.25);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+::selection{background:var(--gold);color:var(--navy)}
+img{display:block}
+
+/* ═══ SCROLLBAR ═══ */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-thumb{background:var(--navy3);border-radius:2px}
+
+/* ═══ NAVBAR ═══ */
+#nav{
+  position:fixed;inset:0 0 auto;z-index:999;
+  height:70px;padding:0 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all .35s;
+}
+#nav.solid{
+  background:rgba(7,9,15,.97);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(245,208,32,.18);
+  box-shadow:0 4px 40px rgba(0,0,0,.5);
+}
+.logo{display:flex;align-items:center;gap:.85rem;text-decoration:none}
+.logo-emblem{width:52px;height:52px;flex-shrink:0;object-fit:contain;object-position:center}
+.logo-name{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.45rem;letter-spacing:.12em;color:var(--white);line-height:1
+}
+.logo-sub{font-size:.62rem;font-weight:500;color:var(--gold);letter-spacing:.25em;text-transform:uppercase;margin-top:.15rem}
+nav.links{display:flex;align-items:center;gap:.15rem}
+nav.links a{
+  color:var(--muted);text-decoration:none;font-size:.8rem;font-weight:500;
+  padding:.5rem 1rem;border-radius:6px;transition:all .2s;letter-spacing:.02em;
+}
+nav.links a:hover{color:var(--white);background:rgba(255,255,255,.06)}
+.nav-btn{
+  background:var(--gold)!important;color:var(--navy)!important;
+  font-weight:800!important;border-radius:7px!important;
+  padding:.55rem 1.3rem!important;margin-left:.5rem;
+  box-shadow:0 2px 16px rgba(245,208,32,.3);
+}
+.nav-btn:hover{background:var(--gold2)!important;transform:translateY(-1px);box-shadow:0 4px 24px rgba(245,208,32,.45)!important}
+
+/* ═══ HERO ═══ */
+.hero{
+  min-height:100vh;position:relative;
+  display:flex;align-items:center;overflow:hidden;
+}
+.hero-video-bg{
+  position:absolute;inset:0;
+  background:
+    url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1920&q=90') center/cover no-repeat;
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(to right, rgba(7,9,15,.97) 0%, rgba(7,9,15,.8) 50%, rgba(13,27,75,.4) 100%),
+    linear-gradient(to top, rgba(7,9,15,.8) 0%, transparent 40%);
+}
+/* decorative diagonal stripe */
+.hero-stripe{
+  position:absolute;right:-100px;top:0;bottom:0;width:500px;
+  background:linear-gradient(135deg,transparent 45%,rgba(245,208,32,.04) 45%,rgba(245,208,32,.04) 55%,transparent 55%);
+  pointer-events:none;
+}
+.hero-content{
+  position:relative;z-index:2;
+  max-width:1300px;margin:0 auto;
+  padding:9rem 3rem 5rem;
+  display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;
+  width:100%;
+}
+.hero-season{
+  display:inline-flex;align-items:center;gap:.5rem;
+  border:1px solid rgba(245,208,32,.35);background:rgba(245,208,32,.08);
+  color:var(--gold);font-size:.7rem;font-weight:700;padding:.38rem 1rem;
+  border-radius:100px;letter-spacing:.18em;text-transform:uppercase;
+  margin-bottom:1.6rem;
+}
+.hero-season::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(3.5rem,7vw,6.5rem);
+  line-height:.95;letter-spacing:.04em;
+  margin-bottom:1.4rem;
+}
+.hero h1 .line-accent{
+  display:block;color:var(--gold);
+  -webkit-text-stroke:0px transparent;
+  text-shadow:0 0 80px rgba(245,208,32,.3);
+}
+.hero h1 .line-outline{
+  display:block;
+  -webkit-text-stroke:2px rgba(255,255,255,.3);
+  color:transparent;
+}
+.hero-desc{
+  color:var(--muted);font-size:.97rem;line-height:1.85;
+  max-width:500px;margin-bottom:2.2rem;
+  border-left:3px solid var(--gold);padding-left:1rem;
+}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-weight:700;font-size:.84rem;padding:.9rem 1.8rem;
+  border-radius:8px;text-decoration:none;transition:all .25s;
+  border:none;cursor:pointer;letter-spacing:.03em;
+}
+.btn-gold{
+  background:var(--gold);color:var(--navy);
+  box-shadow:0 4px 24px rgba(245,208,32,.35);font-weight:800;
+}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(245,208,32,.5)}
+.btn-outline{
+  background:transparent;color:var(--white);
+  border:1.5px solid rgba(255,255,255,.2);
+}
+.btn-outline:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05);transform:translateY(-2px)}
+
+/* hero right panel */
+.hero-panel{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:20px;padding:2.2rem;
+  backdrop-filter:blur(10px);
+}
+.panel-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:1.5rem;padding-bottom:1.2rem;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.panel-title{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.panel-season{
+  background:rgba(245,208,32,.12);border:1px solid rgba(245,208,32,.25);
+  color:var(--gold);font-size:.68rem;font-weight:700;
+  padding:.2rem .7rem;border-radius:100px;
+}
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+.kpi{
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
+  border-radius:12px;padding:1.2rem;text-align:center;
+  transition:all .2s;
+}
+.kpi:hover{background:rgba(245,208,32,.06);border-color:rgba(245,208,32,.2)}
+.kpi-n{
+  font-family:'Bebas Neue',sans-serif;font-size:2.8rem;line-height:1;
+  color:var(--gold);
+}
+.kpi-l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:.3rem}
+.panel-quote{
+  background:rgba(245,208,32,.06);border-left:3px solid var(--gold);
+  border-radius:0 10px 10px 0;padding:1rem 1.2rem;
+  font-size:.83rem;color:var(--muted);line-height:1.65;font-style:italic;
+}
+.panel-quote strong{color:var(--gold);font-style:normal;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:.3rem}
+
+/* ═══ BAND STAGIONE ═══ */
+.season-band{
+  background:var(--gold);padding:1.1rem 3rem;
+  display:flex;align-items:center;justify-content:center;gap:4rem;flex-wrap:wrap;
+}
+.band-item{
+  display:flex;align-items:center;gap:.7rem;
+  font-size:.82rem;font-weight:700;color:var(--navy);letter-spacing:.04em;
+}
+.band-item span{font-weight:400;opacity:.7}
+
+/* ═══ SECTION BASE ═══ */
+section{padding:7rem 3rem}
+.container{max-width:1280px;margin:0 auto}
+.sec-label{
+  font-size:.65rem;font-weight:800;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.8rem;display:block;
+}
+.sec-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(2.2rem,4.5vw,3.8rem);
+  letter-spacing:.04em;line-height:1;margin-bottom:.7rem;
+}
+.sec-sub{color:var(--muted);font-size:.93rem;line-height:1.8;max-width:560px}
+.sec-line{width:52px;height:3px;background:var(--gold);border-radius:2px;margin:1.5rem 0}
+
+/* ═══ NUMERI ═══ */
+#numeri{
+  background:var(--navy);position:relative;
+  padding:5rem 3rem;overflow:hidden;
+}
+#numeri::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(245,208,32,.06) 0%,transparent 70%);
+}
+#numeri::after{
+  content:'2026';
+  position:absolute;right:-2rem;top:50%;transform:translateY(-50%);
+  font-family:'Bebas Neue',sans-serif;font-size:22rem;color:rgba(255,255,255,.02);
+  line-height:1;pointer-events:none;letter-spacing:.05em;
+}
+.numeri-row{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;overflow:hidden;position:relative;z-index:1;
+}
+.num-block{
+  background:var(--navy);padding:2.5rem 1rem;text-align:center;
+  transition:background .25s;cursor:default;
+}
+.num-block:hover{background:rgba(245,208,32,.08)}
+.num-val{
+  font-family:'Bebas Neue',sans-serif;font-size:3.5rem;line-height:1;
+  color:var(--gold);letter-spacing:.02em;
+}
+.num-lbl{
+  font-size:.7rem;color:rgba(255,255,255,.5);
+  text-transform:uppercase;letter-spacing:.12em;line-height:1.4;margin-top:.5rem;
+}
+
+/* ═══ SPORT ═══ */
+#sport{background:var(--dark)}
+.sport-mosaic{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  grid-template-rows:280px 280px;
+  gap:3px;margin-top:4rem;border-radius:16px;overflow:hidden;
+}
+.sport-tile{position:relative;overflow:hidden;cursor:pointer}
+.sport-tile:first-child{grid-row:span 2}
+.sport-tile img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease,filter .4s;
+  filter:brightness(.55) saturate(.7);
+}
+.sport-tile:hover img{transform:scale(1.08);filter:brightness(.4) saturate(1.1)}
+.sport-tile-info{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:1.8rem;
+  background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.1) 60%,transparent 100%);
+  transition:background .3s;
+}
+.sport-tile:hover .sport-tile-info{background:linear-gradient(to top,rgba(13,27,75,.95) 0%,rgba(13,27,75,.4) 100%)}
+.sport-tag{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+.sport-name{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.05em;line-height:1}
+.sport-tile:first-child .sport-name{font-size:2.8rem}
+.sport-more{
+  margin-top:.5rem;font-size:.8rem;color:rgba(255,255,255,.5);
+  max-height:0;overflow:hidden;transition:max-height .4s,opacity .3s;opacity:0;
+}
+.sport-tile:hover .sport-more{max-height:60px;opacity:1}
+
+/* ═══ CALCIO ═══ */
+#calcio{background:var(--dark2)}
+.calcio-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:4rem}
+.squadre-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.sq-card{
+  background:var(--dark3);border:1px solid rgba(255,255,255,.05);
+  border-radius:10px;padding:.9rem 1.1rem;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all .2s;
+}
+.sq-card:hover{border-color:rgba(245,208,32,.25);background:rgba(245,208,32,.04);transform:translateX(3px)}
+.sq-name{font-size:.84rem;font-weight:600}
+.sq-badge{
+  font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  padding:.18rem .55rem;border-radius:4px;
+  background:rgba(245,208,32,.12);color:var(--gold);white-space:nowrap;
+}
+.sq-badge.fem{background:rgba(236,72,153,.12);color:#f472b6}
+.sq-badge.base{background:rgba(34,197,94,.12);color:#4ade80}
+.calcio-right{display:flex;flex-direction:column;gap:1.5rem}
+.stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.stat-card{
+  background:var(--navy);border-radius:14px;padding:1.6rem;text-align:center;
+  border:1px solid rgba(245,208,32,.1);transition:all .2s;
+}
+.stat-card:hover{border-color:rgba(245,208,32,.3);transform:translateY(-3px)}
+.stat-card-n{font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--gold);line-height:1}
+.stat-card-l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-top:.4rem}
+.calcio-img{border-radius:14px;overflow:hidden;position:relative}
+.calcio-img img{width:100%;height:220px;object-fit:cover;filter:brightness(.7) saturate(.8)}
+.calcio-img-overlay{
+  position:absolute;inset:0;background:linear-gradient(120deg,rgba(13,27,75,.7),transparent);
+  display:flex;align-items:flex-end;padding:1.2rem;
+}
+.calcio-img-text{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.08em;color:var(--gold)}
+.calcio-contact{
+  background:var(--dark3);border:1px solid rgba(245,208,32,.12);
+  border-radius:12px;padding:1.3rem 1.5rem;
+}
+.cc-row{display:flex;align-items:center;gap:.7rem;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:.85rem}
+.cc-row:last-child{border:none;padding-bottom:0}
+.cc-row a{color:var(--gold);text-decoration:none;font-weight:600}
+.cc-row a:hover{text-decoration:underline}
+.cc-row .cc-label{color:var(--muted);font-size:.75rem;min-width:60px}
+
+/* ═══ PRENOTAZIONE ═══ */
+#prenota{background:var(--dark)}
+.prenota-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;margin-top:4rem}
+.strutture{display:flex;flex-direction:column;gap:.7rem}
+.str-btn{
+  display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;
+  background:var(--dark2);border:1.5px solid rgba(255,255,255,.05);
+  border-radius:12px;cursor:pointer;transition:all .22s;
+  font-family:'Inter',sans-serif;color:var(--white);text-align:left;width:100%;
+}
+.str-btn:hover,.str-btn.active{
+  background:rgba(245,208,32,.07);border-color:var(--gold);
+}
+.str-icon{font-size:1.7rem;width:42px;text-align:center;flex-shrink:0}
+.str-name{font-weight:700;font-size:.9rem}
+.str-loc{font-size:.75rem;color:var(--muted);margin-top:.15rem}
+.str-arrow{margin-left:auto;color:var(--gold);opacity:0;transition:opacity .2s}
+.str-btn:hover .str-arrow,.str-btn.active .str-arrow{opacity:1}
+.prenota-info{
+  margin-top:1.5rem;background:rgba(245,208,32,.05);
+  border:1px solid rgba(245,208,32,.15);border-radius:12px;padding:1.2rem 1.4rem;
+  font-size:.83rem;color:var(--muted);line-height:1.8;
+}
+.prenota-info a{color:var(--gold);text-decoration:none;font-weight:600}
+
+/* form */
+.form-box{
+  background:var(--dark2);border:1px solid rgba(255,255,255,.07);
+  border-radius:20px;padding:2.2rem;
+}
+.form-title{
+  font-family:'Bebas Neue',sans-serif;font-size:1.8rem;
+  letter-spacing:.06em;color:var(--gold);margin-bottom:.4rem;
+}
+.form-subtitle{font-size:.8rem;color:var(--muted);margin-bottom:1.8rem}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.fg{display:flex;flex-direction:column;gap:.35rem}
+.fg.full{grid-column:span 2}
+.fg label{font-size:.63rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.fg input,.fg select,.fg textarea{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);
+  color:var(--white);padding:.78rem 1rem;font-family:'Inter',sans-serif;
+  font-size:.87rem;border-radius:8px;outline:none;transition:border .2s,background .2s;width:100%;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{
+  border-color:var(--gold);background:rgba(245,208,32,.04);
+}
+.fg select option{background:#101628}
+.fg textarea{resize:vertical;min-height:80px}
+.fg input[readonly]{background:rgba(245,208,32,.08);border-color:rgba(245,208,32,.25);cursor:default}
+.submit-btn{
+  width:100%;margin-top:1.2rem;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:var(--navy);border:none;padding:1.05rem;
+  font-family:'Inter',sans-serif;font-size:.85rem;
+  font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  border-radius:10px;cursor:pointer;transition:all .28s;
+  box-shadow:0 4px 20px rgba(245,208,32,.3);
+}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(245,208,32,.45)}
+.form-ok{
+  display:none;text-align:center;padding:3rem 2rem;
+}
+.form-ok-icon{font-size:3.5rem;margin-bottom:1rem}
+.form-ok h3{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--gold);letter-spacing:.06em}
+.form-ok p{font-size:.88rem;color:var(--muted);margin-top:.7rem;line-height:1.7}
+
+/* ═══ CONTATTI ═══ */
+#contatti{background:var(--navy);position:relative;overflow:hidden}
+#contatti::before{
+  content:'';position:absolute;right:-200px;top:-200px;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(245,208,32,.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.contatti-layout{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-top:4rem}
+.cblock{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;padding:2rem;transition:all .22s;
+}
+.cblock:hover{background:rgba(245,208,32,.05);border-color:rgba(245,208,32,.2);transform:translateY(-4px)}
+.cblock-icon{
+  width:48px;height:48px;background:rgba(245,208,32,.12);
+  border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin-bottom:1.3rem;
+}
+.cblock h3{
+  font-size:.62rem;font-weight:800;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:1rem;
+}
+.cblock p,.cblock a{
+  font-size:.88rem;color:rgba(255,255,255,.7);
+  line-height:1.9;text-decoration:none;display:block;
+}
+.cblock a:hover{color:var(--gold)}
+.hours{margin-top:.5rem}
+.h-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:.83rem;
+}
+.h-row:last-child{border:none}
+.h-day{color:rgba(255,255,255,.4)}
+.h-time{color:rgba(255,255,255,.85);font-weight:500}
+.h-closed{color:#f87171}
+.map-box{margin-top:3rem;border-radius:16px;overflow:hidden;height:380px;border:1px solid rgba(255,255,255,.07)}
+.map-box iframe{width:100%;height:100%;border:none;filter:invert(.9) hue-rotate(185deg) saturate(.2) brightness(.85)}
+
+/* ═══ SAFEGUARDING ═══ */
+#safeguarding{background:var(--dark2)}
+.safeguarding-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:4rem}
+.sg-contact-box{
+  background:var(--dark3);border:1px solid rgba(245,208,32,.15);
+  border-radius:16px;padding:2rem;
+}
+.sg-contact-box h3{
+  font-family:'Bebas Neue',sans-serif;font-size:1.5rem;
+  letter-spacing:.06em;color:var(--gold);margin-bottom:1.5rem;
+}
+.sg-row{
+  display:flex;align-items:flex-start;gap:.8rem;
+  padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.05);
+  font-size:.87rem;line-height:1.6;
+}
+.sg-row:last-child{border:none;padding-bottom:0}
+.sg-icon{font-size:1.1rem;flex-shrink:0;margin-top:.05rem}
+.sg-label{font-size:.65rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.15rem}
+.sg-row a{color:var(--white);text-decoration:none;font-weight:600}
+.sg-row a:hover{color:var(--gold)}
+.sg-row p{color:rgba(255,255,255,.7);margin:0}
+.sg-notice{
+  margin-top:1.5rem;background:rgba(245,208,32,.06);
+  border-left:3px solid var(--gold);border-radius:0 10px 10px 0;
+  padding:1rem 1.2rem;font-size:.8rem;color:var(--muted);line-height:1.7;
+}
+.sg-docs-box{
+  background:var(--dark3);border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;padding:2rem;
+}
+.sg-docs-box h3{
+  font-family:'Bebas Neue',sans-serif;font-size:1.5rem;
+  letter-spacing:.06em;color:var(--gold);margin-bottom:1.5rem;
+}
+.sg-doc-list{display:flex;flex-direction:column;gap:.5rem}
+.sg-doc-item{
+  display:flex;align-items:center;gap:.9rem;
+  padding:.85rem 1.1rem;
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
+  border-radius:10px;text-decoration:none;color:var(--white);
+  font-size:.86rem;font-weight:500;transition:all .2s;
+}
+.sg-doc-item:hover{background:rgba(245,208,32,.07);border-color:rgba(245,208,32,.25);transform:translateX(4px);color:var(--gold)}
+.sg-doc-icon{font-size:1.1rem;flex-shrink:0}
+.sg-doc-arrow{margin-left:auto;color:var(--gold);opacity:.5;font-size:.8rem;transition:opacity .2s}
+.sg-doc-item:hover .sg-doc-arrow{opacity:1}
+@media(max-width:1024px){
+  .safeguarding-layout{grid-template-columns:1fr;gap:2rem}
+}
+
+/* ═══ FOOTER ═══ */
+footer{
+  background:var(--black);border-top:1px solid rgba(255,255,255,.06);
+  padding:2.2rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+}
+.footer-logo{
+  display:flex;align-items:center;gap:.7rem;text-decoration:none;
+}
+.footer-logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.1em;color:var(--gold)}
+.footer-logo-sub{font-size:.65rem;color:var(--muted);letter-spacing:.1em;margin-top:.1rem;text-transform:uppercase}
+footer p{font-size:.72rem;color:rgba(255,255,255,.2);text-align:center}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.72rem;color:rgba(255,255,255,.3);text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
+
+/* ═══ REVEAL ═══ */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .75s ease,transform .75s ease}
+.reveal.up{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+
+/* ═══ MOBILE ═══ */
+@media(max-width:1024px){
+  section{padding:5rem 1.5rem}
+  #nav{padding:0 1.2rem}
+  nav.links a:not(.nav-btn){display:none}
+  .hero-content{grid-template-columns:1fr;gap:3rem;padding:8rem 1.5rem 4rem}
+  .hero-panel{display:none}
+  .numeri-row{grid-template-columns:repeat(3,1fr)}
+  .sport-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .sport-tile:first-child{grid-row:span 1;grid-column:span 2}
+  .calcio-layout,.prenota-layout,.contatti-layout{grid-template-columns:1fr;gap:3rem}
+  .squadre-grid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .fg.full{grid-column:span 1}
+  .season-band{gap:1.5rem;padding:1rem 1.5rem}
+  footer{flex-direction:column;text-align:center}
+  .footer-links{justify-content:center}
+}
+@media(max-width:600px){
+  .numeri-row{grid-template-columns:repeat(2,1fr)}
+  .stat-cards{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:clamp(2.8rem,10vw,4rem)}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<header id="nav">
+  <a href="#" class="logo">
+    <img src="logo.png" alt="Stemma Polisportiva Vianney" class="logo-emblem"/>
+    <div>
+      <div class="logo-name">Polisportiva Vianney</div>
+      <div class="logo-sub">Torino · Stagione 2026/27</div>
+    </div>
+  </a>
+  <nav class="links">
+    <a href="#sport">Sport</a>
+    <a href="#calcio">Calcio</a>
+    <a href="#prenota">Prenota</a>
+    <a href="#contatti">Contatti</a>
+    <a href="#safeguarding">Safeguarding</a>
+    <a href="#prenota" class="nav-btn">📅 Prenota ora</a>
+  </nav>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-video-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-stripe"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-season">⚽ Stagione 2026 / 2027</div>
+      <h1>
+        <span class="line-outline">Sport &amp;</span>
+        <span class="line-accent">Comunità</span>
+        <span style="color:var(--white)">Vianney.</span>
+      </h1>
+      <p class="hero-desc">La Polisportiva Vianney è il cuore sportivo del quartiere dal 2000. Calcio, pallavolo, bocce e musica per oltre <strong style="color:var(--white)">1.500 persone ogni anno</strong> a Torino.</p>
+      <div class="hero-cta">
+        <a href="#prenota" class="btn btn-gold">📅 Prenota campetto o sala</a>
+        <a href="#calcio" class="btn btn-outline">⚽ Vianney Calcio 2026/27</a>
+      </div>
+    </div>
+    <div class="hero-panel reveal">
+      <div class="panel-head">
+        <span class="panel-title">Vianney in numeri</span>
+        <span class="panel-season">2026/27</span>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi"><div class="kpi-n">280</div><div class="kpi-l">Giocatori calcio</div></div>
+        <div class="kpi"><div class="kpi-n">14</div><div class="kpi-l">Squadre FIGC</div></div>
+        <div class="kpi"><div class="kpi-n">16</div><div class="kpi-l">Allenatori</div></div>
+        <div class="kpi"><div class="kpi-n">35</div><div class="kpi-l">Dirigenti</div></div>
+      </div>
+      <div class="panel-quote">
+        <strong>Giallo &amp; Blu</strong>
+        "Fare sport a Vianney significa crescere insieme, dentro e fuori dal campo."
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BAND ═══ -->
+<div class="season-band">
+  <div class="band-item">⭐ <span>Scuola Calcio d'Élite FIGC</span></div>
+  <div class="band-item">⚽ <span>Calcio · 14 squadre</span></div>
+  <div class="band-item">🏐 <span>Pallavolo</span></div>
+  <div class="band-item">🎯 <span>Bocce · 4 campi</span></div>
+  <div class="band-item">🎵 <span>Laboratorio Musicale</span></div>
+  <div class="band-item">🏟️ <span>5 strutture prenotabili</span></div>
+  <div class="band-item">📍 <span>Torino – dal 2000</span></div>
+</div>
+
+<!-- ═══ NUMERI ═══ -->
+<section id="numeri" style="padding:5rem 3rem">
+  <div class="container">
+    <div class="numeri-row reveal">
+      <div class="num-block"><div class="num-val" data-target="280">0</div><div class="num-lbl">Giocatori<br>di Calcio</div></div>
+      <div class="num-block"><div class="num-val" data-target="14">0</div><div class="num-lbl">Squadre<br>FIGC</div></div>
+      <div class="num-block"><div class="num-val" data-target="130">0</div><div class="num-lbl">Bambini<br>Scuola Calcio</div></div>
+      <div class="num-block"><div class="num-val" data-target="1500">0</div><div class="num-lbl">Persone<br>all'Anno</div></div>
+      <div class="num-block"><div class="num-val" data-target="5">0</div><div class="num-lbl">Strutture<br>Prenotabili</div></div>
+      <div class="num-block"><div class="num-val" data-target="2000">0</div><div class="num-lbl">Anno di<br>Fondazione</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPORT ═══ -->
+<section id="sport">
+  <div class="container">
+    <div class="reveal">
+      <span class="sec-label">Le nostre discipline</span>
+      <h2 class="sec-title">Uno sport<br>per ogni età</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="sport-mosaic reveal">
+      <div class="sport-tile">
+        <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=900&q=80" alt="Calcio" loading="lazy"/>
+        <div class="sport-tile-info">
+          <span class="sport-tag">14 squadre · 280 atleti · FIGC</span>
+          <h3 class="sport-name">Calcio</h3>
+          <p class="sport-more">Scuola calcio dai 6 anni, settore giovanile completo, prima squadra e squadra femminile. Tutto iscritto FIGC.</p>
+        </div>
+      </div>
+      <div class="sport-tile">
+        <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=700&q=80" alt="Pallavolo" loading="lazy"/>
+        <div class="sport-tile-info">
+          <span class="sport-tag">Maschile &amp; femminile</span>
+          <h3 class="sport-name">Pallavolo</h3>
+          <p class="sport-more">Campionati provinciali, scuola di avviamento per tutte le età.</p>
+        </div>
+      </div>
+      <div class="sport-tile">
+        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=700&q=80" alt="Musica" loading="lazy"/>
+        <div class="sport-tile-info">
+          <span class="sport-tag">Corale · Orchestra · Scuola</span>
+          <h3 class="sport-name">Musica</h3>
+          <p class="sport-more">Laboratorio musicale con corale, scuola di strumento e orchestra giovanile.</p>
+        </div>
+      </div>
+      <div class="sport-tile">
+        <img src="https://images.unsplash.com/photo-1699796266946-84ee5ef9f52d?w=700&q=80" alt="Bocce" loading="lazy"/>
+        <div class="sport-tile-info">
+          <span class="sport-tag">4 campi coperti · 200+ adulti</span>
+          <h3 class="sport-name">Bocce</h3>
+          <p class="sport-more">Sport e aggregazione per adulti su 4 campi coperti. Tornei e campionati.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CALCIO ═══ -->
+<section id="calcio">
+  <div class="container">
+    <div class="reveal">
+      <span class="sec-label">Settore calcio FIGC · Stagione 2026/27</span>
+      <h2 class="sec-title">Vianney Calcio</h2>
+      <div style="display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);font-size:.75rem;font-weight:900;padding:.55rem 1.2rem;border-radius:100px;letter-spacing:.1em;text-transform:uppercase;margin:.8rem 0 1.2rem;box-shadow:0 4px 20px rgba(245,208,32,.4)">
+        ⭐ Scuola Calcio d'Élite FIGC
+      </div>
+      <div class="sec-line"></div>
+      <p class="sec-sub">14 squadre, 280 giocatori, una formazione femminile. Il calcio che cresce con valori.</p>
+    </div>
+    <div class="calcio-layout">
+      <div class="reveal">
+        <p style="font-size:.65rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">Rose 2026/27</p>
+        <div class="squadre-grid">
+          <div class="sq-card"><span class="sq-name">🏫 Scuola Calcio</span><span class="sq-badge base">6–10 anni</span></div>
+          <div class="sq-card"><span class="sq-name">Under 14</span><span class="sq-badge">Giovanile</span></div>
+          <div class="sq-card"><span class="sq-name">Under 15</span><span class="sq-badge">Giovanile</span></div>
+          <div class="sq-card"><span class="sq-name">Under 16</span><span class="sq-badge">Giovanile</span></div>
+          <div class="sq-card"><span class="sq-name">Under 17</span><span class="sq-badge">Giovanile</span></div>
+          <div class="sq-card"><span class="sq-name">Under 19</span><span class="sq-badge">Giovanile</span></div>
+          <div class="sq-card"><span class="sq-name">Seconda Categoria</span><span class="sq-badge">1ª Squadra</span></div>
+          <div class="sq-card"><span class="sq-name">⚽ Femminile</span><span class="sq-badge fem">Femminile</span></div>
+          <div class="sq-card" style="grid-column:span 2"><span class="sq-name">🏫 Progetto Scuole Elementari</span><span class="sq-badge base">~220 bimbi</span></div>
+        </div>
+      </div>
+      <div class="calcio-right reveal reveal-delay-1">
+        <div class="stat-cards">
+          <div class="stat-card"><div class="stat-card-n">280</div><div class="stat-card-l">Giocatori</div></div>
+          <div class="stat-card"><div class="stat-card-n">14</div><div class="stat-card-l">Squadre</div></div>
+          <div class="stat-card"><div class="stat-card-n">16</div><div class="stat-card-l">Allenatori</div></div>
+          <div class="stat-card"><div class="stat-card-n">35</div><div class="stat-card-l">Dirigenti</div></div>
+        </div>
+        <div class="calcio-img">
+          <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=700&q=80" alt="Campo Vianney" loading="lazy"/>
+          <div class="calcio-img-overlay"><span class="calcio-img-text">⚽ Campo Sintetico · Via Bartoli</span></div>
+        </div>
+        <div class="calcio-contact">
+          <div class="cc-row"><span class="cc-label">📞 Tel</span><a href="tel:011616790">011 616 790</a></div>
+          <div class="cc-row"><span class="cc-label">📧 Email</span><a href="mailto:vianneycalcio@polisportivavianney.it">vianneycalcio@polisportivavianney.it</a></div>
+          <div class="cc-row"><span class="cc-label">🕐 Orari</span><span style="font-size:.82rem;color:var(--muted)">Lun–Ven · 17:15 – 19:30</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRENOTAZIONE ═══ -->
+<section id="prenota">
+  <div class="container">
+    <div class="reveal">
+      <span class="sec-label">Online · Immediato · Confermato in 24h</span>
+      <h2 class="sec-title">Prenota Campetto<br>o Sala</h2>
+      <div class="sec-line"></div>
+      <p class="sec-sub">Scegli la struttura, data e orario. La segreteria ti conferma entro 24 ore.</p>
+    </div>
+    <div class="prenota-layout">
+      <div class="reveal">
+        <p style="font-size:.65rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">Strutture disponibili</p>
+        <div class="strutture">
+          <button class="str-btn active" onclick="pick(this,'Campo Calcio a 11')">
+            <span class="str-icon">🏟️</span>
+            <div><div class="str-name">Campo Calcio a 11</div><div class="str-loc">Via Bartoli 19/B · Manto sintetico</div></div>
+            <span class="str-arrow">→</span>
+          </button>
+          <button class="str-btn" onclick="pick(this,'Campo Calcio a 5')">
+            <span class="str-icon">⚽</span>
+            <div><div class="str-name">Campo Calcio a 5</div><div class="str-loc">Via Bartoli 19/B · Manto sintetico</div></div>
+            <span class="str-arrow">→</span>
+          </button>
+          <button class="str-btn" onclick="pick(this,'Sala Polivalente')">
+            <span class="str-icon">🏛️</span>
+            <div><div class="str-name">Sala Polivalente</div><div class="str-loc">Via Gianelli 8/b · Feste, eventi, riunioni</div></div>
+            <span class="str-arrow">→</span>
+          </button>
+          <button class="str-btn" onclick="pick(this,'Sala Ricreativa')">
+            <span class="str-icon">🎮</span>
+            <div><div class="str-name">Sala Ricreativa</div><div class="str-loc">Via Gianelli 8/b · Attività di gruppo</div></div>
+            <span class="str-arrow">→</span>
+          </button>
+          <button class="str-btn" onclick="pick(this,'Sala Bar e Cucina')">
+            <span class="str-icon">🍽️</span>
+            <div><div class="str-name">Sala Bar e Cucina</div><div class="str-loc">Via Gianelli 8/b · Pranzi, cene, feste</div></div>
+            <span class="str-arrow">→</span>
+          </button>
+        </div>
+        <div class="prenota-info">
+          📞 <a href="tel:0113177043">011 317 7043</a> &nbsp;|&nbsp;
+          📧 <a href="mailto:segreteria@polisportivavianney.it">segreteria@polisportivavianney.it</a><br>
+          🕐 Segreteria: Lun–Ven 15:30–19:00
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="form-box" id="fbox">
+          <div class="form-title">Richiesta Prenotazione</div>
+          <div class="form-subtitle">Riceverai conferma entro 24 ore via WhatsApp o telefono</div>
+          <form id="bForm">
+            <div class="fgrid">
+              <div class="fg full"><label>Struttura</label><input id="fStruttura" readonly value="Campo Calcio a 11"/></div>
+              <div class="fg"><label>Nome e Cognome</label><input id="fNome" placeholder="Mario Rossi" required/></div>
+              <div class="fg"><label>Telefono / WhatsApp</label><input id="fTel" type="tel" placeholder="+39 333 000 0000" required/></div>
+              <div class="fg"><label>Data</label><input id="fData" type="date" required/></div>
+              <div class="fg"><label>Orario inizio</label>
+                <select id="fOrario" required>
+                  <option value="">—</option>
+                  <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option>
+                  <option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
+                  <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+                  <option>20:00</option><option>21:00</option>
+                </select>
+              </div>
+              <div class="fg"><label>Durata</label>
+                <select id="fDurata">
+                  <option>1 ora</option><option>1,5 ore</option><option>2 ore</option>
+                  <option>3 ore</option><option>Mezza giornata</option><option>Intera giornata</option>
+                </select>
+              </div>
+              <div class="fg"><label>Scopo</label>
+                <select id="fScopo">
+                  <option>Partita amichevole</option><option>Allenamento</option>
+                  <option>Torneo / Evento sportivo</option><option>Festa / Evento privato</option>
+                  <option>Riunione / Assemblea</option><option>Altro</option>
+                </select>
+              </div>
+              <div class="fg full"><label>Note</label><textarea id="fNote" placeholder="Numero partecipanti, richieste particolari…"></textarea></div>
+            </div>
+            <button type="submit" class="submit-btn">📅 Invia richiesta di prenotazione</button>
+          </form>
+        </div>
+        <div class="form-ok" id="fOk">
+          <div class="form-ok-icon">✅</div>
+          <h3>Richiesta inviata!</h3>
+          <p>La segreteria ti contatterà entro 24 ore per confermare disponibilità e costi.<br><br>
+          Per urgenze: <a href="tel:0113177043" style="color:var(--gold)">011 317 7043</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTATTI ═══ -->
+<section id="contatti">
+  <div class="container">
+    <div class="reveal">
+      <span class="sec-label">Dove siamo</span>
+      <h2 class="sec-title">Contatti &amp; Sedi</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="contatti-layout">
+      <div class="cblock reveal">
+        <div class="cblock-icon">📍</div>
+        <h3>Sedi</h3>
+        <p><strong style="color:var(--white)">Sede Legale</strong><br>Via Gianelli 8 – 10135 Torino</p>
+        <p style="margin-top:.8rem"><strong style="color:var(--white)">Sede Operativa</strong><br>Via Bartoli 19/B – 10135 Torino<br><small style="color:var(--muted2)">Segreteria, corrispondenza, campi sportivi calcio e bocce</small></p>
+        <p style="margin-top:.8rem"><strong style="color:var(--white)">Saloni Polivalenti</strong><br>Via Gianelli 8/b – 10135 Torino</p>
+        <a href="https://maps.google.com/?q=Via+Bartoli+19B,+10135+Torino" target="_blank" rel="noopener" style="margin-top:1rem;color:var(--gold);font-size:.8rem;font-weight:600">→ Apri in Google Maps</a>
+      </div>
+      <div class="cblock reveal reveal-delay-1">
+        <div class="cblock-icon">📞</div>
+        <h3>Segreteria Generale</h3>
+        <a href="tel:0113177043" style="font-weight:700;font-size:1.05rem;color:var(--white)">011 317 7043</a>
+        <a href="mailto:segreteria@polisportivavianney.it" style="margin-top:.4rem">segreteria@polisportivavianney.it</a>
+        <div class="hours" style="margin-top:1rem">
+          <div class="h-row"><span class="h-day">Lun – Ven</span><span class="h-time">15:30 – 19:00</span></div>
+          <div class="h-row"><span class="h-day">Sabato</span><span class="h-closed">Chiuso</span></div>
+          <div class="h-row"><span class="h-day">Domenica</span><span class="h-closed">Chiuso</span></div>
+        </div>
+      </div>
+      <div class="cblock reveal reveal-delay-2">
+        <div class="cblock-icon">⚽</div>
+        <h3>Segreteria Calcio</h3>
+        <a href="tel:011616790" style="font-weight:700;font-size:1.05rem;color:var(--white)">011 616 790</a>
+        <a href="mailto:vianneycalcio@polisportivavianney.it" style="margin-top:.4rem">vianneycalcio@polisportivavianney.it</a>
+        <div class="hours" style="margin-top:1rem">
+          <div class="h-row"><span class="h-day">Lun – Ven</span><span class="h-time">17:15 – 19:30</span></div>
+          <div class="h-row"><span class="h-day">Sabato</span><span class="h-closed">Chiuso</span></div>
+          <div class="h-row"><span class="h-day">Domenica</span><span class="h-closed">Chiuso</span></div>
+        </div>
+        <a href="https://www.facebook.com/PolisportivaVianneyCalcio/" target="_blank" rel="noopener" style="margin-top:1rem;color:var(--gold);font-size:.8rem;font-weight:600">→ Facebook Vianney Calcio</a>
+      </div>
+    </div>
+    <div class="map-box reveal">
+      <iframe src="https://maps.google.com/maps?q=Via+Bartoli+19,+10135+Torino+TO,+Italy&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SAFEGUARDING ═══ -->
+<section id="safeguarding">
+  <div class="container">
+    <div class="reveal">
+      <span class="sec-label">Tutela · Protezione · Legalità</span>
+      <h2 class="sec-title">Responsabile Safeguarding</h2>
+      <div class="sec-line"></div>
+      <p class="sec-sub">La Polisportiva Vianney A.S.D. si impegna per la protezione di tutti i propri atleti da abusi, violenze e discriminazioni.</p>
+    </div>
+    <div class="safeguarding-layout">
+      <div class="reveal">
+        <div class="sg-contact-box">
+          <h3>Contatti Responsabile</h3>
+          <div class="sg-row">
+            <span class="sg-icon">👤</span>
+            <div>
+              <span class="sg-label">Responsabile Safeguarding</span>
+              <p><strong style="color:var(--white)">Giuseppe Magno</strong></p>
+            </div>
+          </div>
+          <div class="sg-row">
+            <span class="sg-icon">📧</span>
+            <div>
+              <span class="sg-label">Posta elettronica</span>
+              <a href="mailto:magno.beppe@gmail.com">magno.beppe@gmail.com</a>
+            </div>
+          </div>
+          <div class="sg-row">
+            <span class="sg-icon">📱</span>
+            <div>
+              <span class="sg-label">Cellulare</span>
+              <a href="tel:+393389727838">338 972 7838</a>
+            </div>
+          </div>
+          <div class="sg-row">
+            <span class="sg-icon">✉️</span>
+            <div>
+              <span class="sg-label">Posta ordinaria</span>
+              <p>Giuseppe Magno, c/o Polisportiva Vianney A.S.D.<br>Via Gianelli n.8 – 10135 Torino<br><em style="color:var(--gold);font-size:.78rem">Indicare "RISERVATA PERSONALE"</em></p>
+            </div>
+          </div>
+          <div class="sg-row">
+            <span class="sg-icon">📬</span>
+            <div>
+              <span class="sg-label">Cassetta postale</span>
+              <p>Presso la sede della Polisportiva Vianney A.S.D.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sg-notice">
+          Tutte le segnalazioni sono trattate con la massima riservatezza nel pieno rispetto della normativa vigente a tutela dei minori e degli atleti.
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="sg-docs-box">
+          <h3>Documentazione</h3>
+          <div class="sg-doc-list">
+            <a href="#" class="sg-doc-item"><span class="sg-doc-icon">📄</span>Regole Atleti<span class="sg-doc-arrow">↓ PDF</span></a>
+            <a href="#" class="sg-doc-item"><span class="sg-doc-icon">📄</span>Regole per Trasferte<span class="sg-doc-arrow">↓ PDF</span></a>
+            <a href="#" class="sg-doc-item"><span class="sg-doc-icon">📄</span>Regole Contenuti Online<span class="sg-doc-arrow">↓ PDF</span></a>
+            <a href="#" class="sg-doc-item"><span class="sg-doc-icon">📄</span>Regole Famiglie<span class="sg-doc-arrow">↓ PDF</span></a>
+            <a href="#" class="sg-doc-item"><span class="sg-doc-icon">📄</span>Codice di Condotta<span class="sg-doc-arrow">↓ PDF</span></a>
+            <a href="#" class="sg-doc-item"><span class="sg-doc-icon">📄</span>Regole Staff<span class="sg-doc-arrow">↓ PDF</span></a>
+            <a href="#" class="sg-doc-item"><span class="sg-doc-icon">📄</span>Modello per la Safeguarding<span class="sg-doc-arrow">↓ PDF</span></a>
+            <a href="#" class="sg-doc-item"><span class="sg-doc-icon">📄</span>Policy Tutela Minori<span class="sg-doc-arrow">↓ PDF</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <a href="#" class="footer-logo">
+    <img src="logo.png" alt="Stemma Polisportiva Vianney" width="38" height="38" style="border-radius:50%"/>
+    <div>
+      <div class="footer-logo-text">Polisportiva Vianney</div>
+      <div class="footer-logo-sub">Torino · Stagione 2026/27</div>
+    </div>
+  </a>
+  <p>© 2026 Polisportiva Vianney ASD · Sede Legale: Via Gianelli 8, 10135 Torino · segreteria@polisportivavianney.it</p>
+  <div class="footer-links">
+    <a href="https://www.polisportivavianney.it" target="_blank">Sito originale</a>
+    <a href="https://www.facebook.com/PolisportivaVianneyCalcio/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/vianneycalcio/" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script>
+// navbar
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>60));
+
+// scroll reveal
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('up');io.unobserve(e.target)}
+  });
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// counter animation
+function animCount(el,target,dur=1800){
+  let start=null;
+  const step=ts=>{
+    if(!start)start=ts;
+    const p=Math.min((ts-start)/dur,1);
+    const ease=1-Math.pow(1-p,3);
+    el.textContent=target>=1000?Math.floor(ease*target).toLocaleString('it'):Math.floor(ease*target);
+    if(p<1)requestAnimationFrame(step);
+    else el.textContent=target>=1000?target.toLocaleString('it'):target;
+  };
+  requestAnimationFrame(step);
+}
+const cio=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('[data-target]').forEach(el=>{
+        animCount(el,+el.dataset.target);
+      });
+      cio.unobserve(e.target);
+    }
+  });
+},{threshold:.3});
+document.querySelectorAll('.numeri-row').forEach(el=>cio.observe(el));
+
+// struttura picker
+function pick(btn,name){
+  document.querySelectorAll('.str-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('fStruttura').value=name;
+}
+
+// min date
+document.getElementById('fData').min=new Date().toISOString().split('T')[0];
+
+// form submit
+document.getElementById('bForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const vals={
+    s:fStruttura.value,n:fNome.value,t:fTel.value,
+    d:fData.value,o:fOrario.value,du:fDurata.value,
+    sc:fScopo.value,no:fNote.value
+  };
+  const msg=encodeURIComponent(
+    `📅 *Prenotazione Vianney*\n\n`+
+    `🏟️ Struttura: ${vals.s}\n`+
+    `👤 Nome: ${vals.n}\n📞 Tel: ${vals.t}\n`+
+    `📅 Data: ${vals.d} · 🕐 ${vals.o} · ⏱ ${vals.du}\n`+
+    `🎯 Scopo: ${vals.sc}\n📝 Note: ${vals.no||'—'}`
+  );
+  window.open(`https://wa.me/390113177043?text=${msg}`,'_blank');
+  document.getElementById('fbox').style.display='none';
+  document.getElementById('fOk').style.display='block';
+});
+</script>
+</body>
+</html>
